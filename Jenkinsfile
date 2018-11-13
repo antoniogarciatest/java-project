@@ -2,9 +2,9 @@ pipeline {
         agent any
 
         stages {
-                stage('build'){
+                stage('Say Hello'){
                         steps {
-                                sh 'ant -f build.xml -v'
+                                sayHello 'Awesome Student!'
                         }
                 }
         }
