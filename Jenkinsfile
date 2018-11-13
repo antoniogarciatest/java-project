@@ -8,5 +8,14 @@ pipeline {
                         }
                 }
         }
+        post {
+                failure {
+                        emailext {
+                                subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Failed!"
+                                body: "<p>test</p>"
+                                to: "antonio.garcia@beeva.com"
+                        }                                
+                }                       
+        }
 }
 
